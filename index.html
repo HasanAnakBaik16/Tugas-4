@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoCar — Luxury Lifestyle Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg width="38" height="28" viewBox="0 0 38 28" fill="none">
+          <ellipse cx="19" cy="14" rx="18" ry="10" stroke="white" stroke-width="1.5" fill="none"/>
+          <path d="M5 14 Q19 4 33 14" stroke="white" stroke-width="1.5" fill="none"/>
+          <text x="19" y="25" font-size="5" fill="white" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" letter-spacing="1">AUTOCAR</text>
+        </svg>
+        <span>AUTOCAR</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#specials">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#footer">Contact Us</a></li>
+      </ul>
+      <a href="tel:+9639978435656" class="nav-phone">+963 997 843 565</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="geo geo1"></div>
+      <div class="geo geo2"></div>
+      <div class="geo geo3"></div>
+      <div class="geo geo4"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-bg-img">
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/7cc3e716130593.562a5c7b3ff78.jpg"
+        alt="Luxury Sports Car"
+        class="hero-car-img"
+        onerror="this.style.display='none'"
+      />
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="line1">LUXURY</span>
+        <span class="line2">LIFESTYLE</span>
+        <span class="line3">RENTALS</span>
+      </h1>
+      <p class="hero-sub">Enjoy the most luxurious experience</p>
+      <a href="#specials" class="hero-btn">DISCOVER</a>
+    </div>
+  </section>
+
+  <!-- ══ TODAY'S SPECIALS ═════════════════════════════════════════════════════ -->
+  <section class="specials" id="specials">
+    <div class="specials-inner">
+      <h2 class="section-title">TODAYS SPECIALS</h2>
+      <div class="filter-tabs">
+        <button class="tab active" data-filter="all">
+          <svg width="14" height="14" viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor"/><rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor"/><rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor"/><rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor"/></svg>
+          View All Cars
+        </button>
+        <button class="tab" data-filter="suv">
+          <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7 Q2 3 5 2 L11 2 Q14 3 15 7 L15 8 L1 8 Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="4" cy="8" r="2" fill="currentColor"/><circle cx="12" cy="8" r="2" fill="currentColor"/></svg>
+          SUV
+        </button>
+        <button class="tab" data-filter="luxury">
+          <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7 Q2 4 4 3 L7 1.5 L9 1.5 L12 3 Q14 4 15 7 L15 8 L1 8 Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="4" cy="8" r="2" fill="currentColor"/><circle cx="12" cy="8" r="2" fill="currentColor"/></svg>
+          Luxury
+        </button>
+      </div>
+
+      <div class="cars-grid" id="carsGrid">
+
+        <!-- Card 1 — BMW dark -->
+        <div class="car-card" data-category="luxury">
+          <div class="car-card-img">
+            <img src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331RYechZ7dyKBJHS9amvhz25Ga5LP%25BeuMwukpKbSk%25Yl6J2YKBnMMLWgn2MiYdDOPHEagdQPBaCnTNU9mlDCKdzky2oU5tkbjJIh4bSk%25p1XZmQGZI5LasNF1c9Jrt3RjhYzDZ7lXw1p8ac1QT8RcLV4j%25AvZf68yCrXpFpNClZQ6K6HrXRaYWYyAQ5nmPmT1agOybW3MnvIT9PS4O2B3ibvRIjedw92bBDMztio9eqhk7wHkMLoACt%25phJHFl5tVou%25KXgB1HSfWQvb%25%25V1Pa295fNEbn%25hV10s9Of0JE4riI14oscZwBEhWrxRtesVZZ857MrJ7RUgChZz35GvloRkcgp2XH50nv6jQ%25gnQ2YDafv42jmqn1hmGDyLOEoNpqTJIsH0yL3uBr%255VJdSeZfFeuzVMR1KpSkNh5EJRVA0og86kNF4HvUbJ0Kc%252G9n4WxfjpICcP81D6BexbUEqY6r89GsLmQIUiprJykaGw6ZuQTeptYRSaLR67m5VnbbYCygNO%25mmlTv0IjGyX3243pTTQdjcdUt3azDxzkodnueRrtGZ9cvCxc672tr93dYgMyIf2cPrUYIpCxEaGqbuE89RIhNQSht8iAm2YInwlQaGcpRB25sa0KExhaVGh%25Ww8jSz3ahpD2" alt="BMW Luxury" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>BMW 7 Series</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span></div>
+            </div>
+            <span class="car-price">$500.00</span>
+          </div>
+        </div>
+
+        <!-- Card 2 — BMW silver -->
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30HVjr7sY5NShKVBzcHkzPoxT2aKJnXRTZhOIBQmSwpsB%25yzDuP%25ABNuiLB98uHLcgXmvE70gp2XHXbgv6jQ%25Qnh2YDafa6Tjmqn1%25ISDyLOEfK9qTJIs1y6L3uBrET1JdSeZsNEuzVMRr0MSkNh5Z4lVA0ogYZWNF4HvmJx0Kc%252y1b4Wxfj0SKcP81D4PkxbUEqcbV89GsLxSHUiprJ8KGGw6ZuUkiptYRSGBO67m5Vpe9YCygN6PjmlTv0YPiyX324mbyTQdjcSQ73azDxVWCdnkq8NPazOALU06KkIFJG4hJABKupcowFeWS6xHlKMPVY8AaWhbNmtXMPo90y71AbHi4TCED9%25wc3lL5iftxdXJuw178zQXGtECUka2L7slGAnMjCrXpF2zalZQ6KjffXRaYWD0QQ5nmPqTUagOybOCnnvIT9ItrO2B3iBeVIjAeSw27BzcNpislZyaBNODXYunDRuAQ53QMc9AFoKGoiLfyHS9P3AKWL2Jei2MOugpn0WNR10m7illZyCFnlwXYucWptvAjoJWHkJES8%25qYCjb8iYJfZtUDTkxbZG7NgXA2Jf3KuvQnO" alt="BMW Green" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>BMW M3 Green</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></div>
+            </div>
+            <span class="car-price">$450.00</span>
+          </div>
+        </div>
+
+        <!-- Card 3 — BMW white -->
+        <div class="car-card" data-category="luxury">
+          <div class="car-card-img">
+            <img src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331zK%25yoKGr8S2nvzBLlFSrWwmfRtKV04uzHMxBzcztzpBeqhk7kFiMLoACtK1hJHFl7xpou%25KXCJDHSfWQluC%25V1PaXslfNEbnQrb10s9OaZ3E4riIqHRscZwBLqirxRteJCZZ857MulARUgChS4A5GvloRsUgp2XH5pcv6jQ%25g6r2YDafvs7jmqn12UDDyLOEjcOqTJIsDbWL3uBrq9YJdSeZLpouzVMRJ4XSkNh5u6yVA0ogSYVNF4HvrFd0Kc%252Zpz4WxfjR6KcP81D5JGxbUEqgtE89GsLv7TUiprJ2CkGw6Zuj8KptYRS3Aw67m5VdQ8YCygNza%25mlTv0k1eyX324AEsTQdjcFAq3azDxKo1dnkq8WwHzOALUocLkIFJGHXXABKup%255FFeWS6fNDKMPVYPzWWhbNmb3OPo90y9iZbH8cLV04MOhFUbKmNagd94fXG1HS91Zys8%25P6EaVT5fNwVvrZR19mMWuRDiCUYODXRTnGNCBGY5DOP7EfNG8bWABNkGPA3FSr26JdoJcl51E8sn8gPkUUi591WmyGZI6ao5NF1bOayjn65e3g5qTMxot1G7c1Qs2C%25Jdo62mJ1lOTjHVcv6Ojd%25p12aKkiH0scCJzL1hJUbKi" alt="BMW White" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>BMW M Series</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span></div>
+            </div>
+            <span class="car-price">$500.00</span>
+          </div>
+        </div>
+
+        <!-- Card 4 — Camaro SS -->
+        <div class="car-card" data-category="luxury">
+          <div class="car-card-img">
+            <img src="https://21stcenturymusclecars.com/wp-content/uploads/2022/08/2015-camaro-ss.jpg" alt="Camaro SS" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>Chevrolet Camaro SS</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div>
+            </div>
+            <span class="car-price">$620.00</span>
+          </div>
+        </div>
+
+        <!-- Card 5 — Ford Ranger -->
+        <div class="car-card" data-category="suv">
+          <div class="car-card-img">
+            <img src="https://d1g6w7sntckt92.cloudfront.net/public/images/car_variant_image/XddWjVSoYfHRegla6bpeQU6M1JwppeDm9H7hc3gm.png" alt="Ford Ranger" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>Ford Ranger</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></div>
+            </div>
+            <span class="car-price">$380.00</span>
+          </div>
+        </div>
+
+        <!-- Card 6 — Ford Mustang -->
+        <div class="car-card" data-category="luxury">
+          <div class="car-card-img">
+            <img src="https://www.ford.com/acslibs/content/dam/na/ford/en_us/images/mustang/2026/360/ecoboost/exterior/mobile/adriatic-blue-green/64f/001-adriatic-blue-green-64f.jpeg" alt="Ford Mustang" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="car-card-info">
+            <div class="car-card-left">
+              <h3>Ford Mustang 2026</h3>
+              <div class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div>
+            </div>
+            <span class="car-price">$750.00</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BRAND BANNER ═════════════════════════════════════════════════════════ -->
+  <section class="brand-banner" id="brand">
+    <div class="brand-car-visual">
+      <img
+        src="https://ford.co.id/wp-content/webp-express/webp-images/uploads/2025/07/1.carbonised-grey.png.webp"
+        alt="Ford Grey"
+        class="brand-car-img"
+        onerror="this.style.opacity='0.2'"
+      />
+    </div>
+    <div class="brand-content">
+      <h2>BOYSTOY<br/>MAIMI</h2>
+      <div class="brand-follow">
+        <span class="follow-line"></span>
+        <span>Follow us</span>
+        <span class="follow-line"></span>
+      </div>
+      <div class="brand-socials">
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ════════════════════════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <h2 class="about-title">LUXURY CAR RENTAL MIAMI</h2>
+        <p class="about-desc">Embark on an unparalleled driving experience with our curated fleet of world-class luxury vehicles. From sleek sports cars to commanding SUVs, every ride is crafted for those who refuse to compromise on excellence.</p>
+        <div class="about-badges">
+          <div class="about-badge">
+            <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 Q16 8 22 16 Q16 24 10 16Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Motors</span>
+          </div>
+          <div class="about-badge">
+            <svg width="32" height="32" viewBox="0 0 32 32"><path d="M6 12 L16 4 L26 12 L26 26 L6 26 Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 26 L12 18 L20 18 L20 26" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Pick up</span>
+          </div>
+          <div class="about-badge">
+            <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4 L18.5 11.5 L26 11.5 L20 16 L22.5 23.5 L16 19 L9.5 23.5 L12 16 L6 11.5 L13.5 11.5 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Luxury</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-images reveal-right">
+        <div class="about-img-grid">
+          <div class="about-img-card img-tall">
+            <img src="https://cdn.fstoppers.com/styles/xlarge/s3/photos/17991/06/01/db610fccb94b49f203da31745e3df94a.jpg?itok=SKn3dAbM" alt="Car in tunnel" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+          <div class="about-img-card img-wide">
+            <img src="bg3.jpg" alt="Ford Mustang Campaign" onerror="this.parentElement.classList.add('img-error')"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo-wrap">
+          <svg width="50" height="38" viewBox="0 0 50 38" fill="none">
+            <ellipse cx="25" cy="19" rx="24" ry="14" stroke="white" stroke-width="1.5" fill="none"/>
+            <path d="M5 19 Q25 5 45 19" stroke="white" stroke-width="1.5" fill="none"/>
+            <text x="25" y="34" font-size="6" fill="white" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" letter-spacing="1">AUTOCAR</text>
+          </svg>
+          <p class="footer-logo-text">AUTOCAR</p>
+        </div>
+        <div class="footer-contact-info">
+          <p><strong>UAE - Dubai</strong></p>
+          <p>+971 21 658 359</p>
+          <p>info-cars@gmail.com</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <form class="footer-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="first" class="form-input" required/>
+            <input type="text" placeholder="last" class="form-input" required/>
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="email" class="form-input" required/>
+            <input type="tel" placeholder="phone number" class="form-input"/>
+          </div>
+          <div class="form-row form-row-single">
+            <input type="text" placeholder="address" class="form-input"/>
+            <button type="submit" class="form-send">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 <strong>Cars</strong></p>
+      <p>Developed by <strong>AutoCar Team</strong></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">✓ Message sent successfully!</div>
+  <script src="script.js"></script>
+</body>
+</html>
